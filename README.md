@@ -4,7 +4,7 @@ A solution to the problem of finding five English words with 25 distinct charact
 
 ## Description
 
-This is improvement of [solution from Benjamin Paassen](https://gitlab.com/bpaassen/five_clique) that decreases the time needed further down from ~21m to ~45s.
+This is improvement of [solution from Benjamin Paassen](https://gitlab.com/bpaassen/five_clique) that decreases the time needed further down from ~21m to ~10.5s.
 
 ## Method
 
