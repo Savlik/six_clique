@@ -21,8 +21,11 @@ for l in "qwertyuiopasdfghjklzxcvbnm":
 print('--- building neighborhoods ---')
 for i in range(len(words)):
 	for j in range(len(words)):
+		if j >= i:
+			break
 		if len(words[i][1] & words[j][1]) == 0:
 			words[i][2].add(j)
+			words[j][2].add(i)
 
 print('--- filling words_that_contain_letter ---')
 # fill words_that_contain_letter
