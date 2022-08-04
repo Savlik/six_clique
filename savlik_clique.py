@@ -3,14 +3,18 @@ words_that_contain_letter = {}
 
 print('--- reading words file ---')
 # words_alpha.txt from https://github.com/dwyl/english-words
+anagrams = set()
 with open('words_alpha.txt') as f:
 	for word in f:
 		word = word[:-1]
 		if len(word) != 5:
 			continue
-		char_set = set(word)
+		char_set = frozenset(word)
 		if len(char_set) != 5:
 			continue
+		if char_set in anagrams:
+			continue
+		anagrams.add(char_set)
 		words.append((word, char_set, set()))
 
 # add single characters as valid words
